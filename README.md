@@ -1,4 +1,4 @@
-# Solid Waste Management Analytics
+# Data Warehouse Design & Materialized Query Tables for Solid Waste Management Analytics
 
 This project demonstrates the end-to-end design and implementation of a Data Warehouse for a leading solid waste management company operating across major cities in Brazil. The solution enables powerful business analytics, detailed reporting, and dashboarding by leveraging a dimensional model, aggregation queries, and Materialized Query Tables (MQTs).
 
