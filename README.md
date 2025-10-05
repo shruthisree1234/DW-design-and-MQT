@@ -1,49 +1,70 @@
-# DW-design-and-MQT
+# Solid Waste Management Analytics
 
-Scenario
-You are a data engineer hired by a solid waste management company. The company collects and recycles solid waste across major cities in the country of Brazil. The company operates hundreds of trucks of different types to collect and transport solid waste. The company would like to create a data warehouse so that it can create reports like
+This project demonstrates the end-to-end design and implementation of a Data Warehouse for a leading solid waste management company operating across major cities in Brazil. The solution enables powerful business analytics, detailed reporting, and dashboarding by leveraging a dimensional model, aggregation queries, and Materialized Query Tables (MQTs).
 
-total waste collected per year per city
-total waste collected per month per city
-total waste collected per quarter per city
-total waste collected per year per trucktype
-total waste collected per trucktype per city
-total waste collected per trucktype per station per city
-You will use your data warehousing skills to design and implement a data warehouse for the company.
+---
 
-Objectives
-In this assignment you will:
+## Scenario
 
-Design a Data Warehouse
-Load data into Data Warehouse
-Write aggregation queries
-Create MQTs
-Create a Dashboard
+You are a data engineer hired by a waste management company that operates hundreds of collection trucks in multiple cities. The company wants to analyze its operations and make data-driven decisions with insights such as:
 
-The solid waste management company has provied you the sample data they wish to collect.
+- Total waste collected per city, month, and year
+- Waste quantities by truck type, station, and zone
+- Aggregated trends and slice-and-dice dashboards for operations
 
-![image](https://github.com/shruthisree1234/DW-design-and-MQT/assets/64841247/a8be167b-ece0-4602-8ac0-2612e9a4d866)
+---
 
-You will start your project by designing a Star Schema warehouse by identifying the columns for the various dimension and fact tables in the schema.
-Design the dimension table MyDimDate
-Design the dimension table MyDimWaste
-Design the dimension table MyDimZone
-Design the fact table MyFactTrips
-Create all these tables using sql
-Load data from csv format into the created tables in postgresql
-Write aggregation queries and create MQTs
-Create a dashboard using Cognos Analytics
+## Objectives
 
-Use the DataForCognos_date.csv file to generate the following charts.
+In this assignment, you will:
 
-Task 17 - Create a pie chart in the dashboard
-Create a pie chart that shows the waste collected by truck type.
+- Design a Star Schema data warehouse (fact and dimension tables)
+- Load real CSV data into the warehouse tables
+- Write aggregation queries to support business requirements
+- Create Materialized Query Tables (MQTs) to optimize analytics
+- Design executive dashboards using Cognos Analytics
 
-Task 18 - Create a bar chart in the dashboard
-Create a bar chart that shows the waste collected station wise.
+---
 
-Task 19 - Create a line chart in the dashboard
-Create a line chart that shows the waste collected by month wise.
+## Project Structure
 
-Task 20 - Create a pie chart in the dashboard
-Create a pie chart that shows the waste collected by city.
+- `Outputs/`: Results, samples, and dashboard outputs
+- `*.csv`: Data sets for dimensions and facts (e.g., Date, Station, Truck, Trips)
+- `MQT.sql`: SQL scripts for creating MQTs and analytical queries
+
+---
+
+## Implementation Steps
+
+1. **Schema Design:**  
+   - Identify dimensions (Date, Waste, Zone, Truck, Station) and fact tables (Trips)
+   - Build a star schema in PostgreSQL
+
+2. **Data Loading:**  
+   - Populate tables from provided CSVs
+
+3. **Aggregation & MQTs:**  
+   - Write SQL for all required aggregations (per city, truck type, time period, etc.)
+   - Create MQTs for fast reporting
+
+4. **Dashboarding:**  
+   - Use Cognos Analytics to create pie, bar, and line charts for KPIs such as:
+     - Waste collected by truck type (pie)
+     - Waste by station (bar)
+     - Waste collection trends by month (line)
+     - Waste collected by city (pie)
+
+---
+
+
+## Example Analytical Questions Addressed
+
+- How much waste is collected each quarter per city?
+- Which truck type collects the most waste annually?
+- What are the busiest collection stations?
+- How do waste quantities trend over time by location and truck type?
+
+---
+
+
+For questions or contributions, please open an issue or reach out via [your email or GitHub profile link].
